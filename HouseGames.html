@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>House Games | Peter's Website </title>
+    <link rel="icon" href="img/colored.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
-<body>
+
+<header class="align">
+
+    <a href="index.html">
+        <img src="img/colored.jpeg" alt="Website logo" class="logoMain">
+    </a>
+    <h1 class="centertextMain">House Games</h1>
+
+        <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
+        <label id="bgtoggle">Toggle Dark Mode!</label>
+    </button>
+
+</header>
+
+<hr>
+
+<body onload="darkCheck()">
+<h4>Here are a list of house games!</h4>
+<ul>
+    <li><a href="https://spyfall.tannerkrewson.com/">Spyfall</a></li>
+    <dt>- "In short, when the game begins, one random player will become the spy,
+        and all others will be given a location, and a role within the location. For example,
+        if the location of a round was "restaurant," one player might be the chef, another the
+        waiter, another the customer, etc. The players will not know who the spy is, and the spy
+        will not know the location. Players take turns asking questions to each other, doing their
+        best not to outright reveal the location in their questions and answers, but not being too
+        vague as to raise suspicion." </dt>
+    <li>Game 2</li>
+    <dt>- This is the second game in the list!</dt>
+</ul>
 <a href="index.html"><b>Home</b></a>
 </body>
 </html>

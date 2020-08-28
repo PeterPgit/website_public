@@ -1,0 +1,80 @@
+        .logoMain {
+        display:block;
+        margin-left: 25px;
+        margin-right: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        border: 2px solid white;
+        padding: 5px;
+        width: 75px;
+        height: 75px;
+        float: left;
+        }
+        .logoMain:hover {
+        /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+        box-shadow: 0 0 5px 2px red;
+        }
+        .centertextMain {
+        padding-left: 50px;
+        }
+        .textTest {
+        color: blue;
+        font-size: 200%;
+        border: 2px solid red;
+        display: inline;
+        }
+        body {
+        font-family: Monaco;
+        background-color: white;
+        color: #f0dcca;
+        transition-duration: 0.4s;
+        }
+        .left {
+        float: left;
+        }
+        .right {
+        margin-left: auto;
+        }
+        .navmenu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+        .navbutton {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        /* padding: length|initial|inherit; */
+        padding: 10px 12px;
+        transition-duration: 0.4s;
+        }
+        .navbutton:hover {
+        background-color: #f0dcca;
+        color: black;
+        }
+        .clear {
+        clear: both;
+        }
+        header.align {
+        display: flex;
+        align-items: center;
+        }
+        .button {
+        border: none;
+        color: white;
+        background-color: black;
+        padding: 10px 22px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+
+        }
+        .dark-mode {
+        background-color: #121212;
+        color: #f0dcca;
+        transition-duration: 0.4s;
+        }

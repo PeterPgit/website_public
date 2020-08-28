@@ -3,11 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Welcome | Peter's Website </title>
+    <title> About | Peter's Website </title>
+    <link rel="icon" href="img/colored.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 
-<body>
-<h1>About me </h1>
+<header class="align">
+    <a href="index.html">
+        <img src="img/colored.jpeg" alt="Website logo" class="logoMain">
+    </a>
+    <h1 class="centertextMain">About</h1>
+
+        <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
+        <label id="bgtoggle">Toggle Dark Mode!</label>
+    </button>
+
+</header>
+
+<hr>
+
+<body onload="darkCheck()">
 Second test
 <a href="index.html"><b>Home</b></a>
 
