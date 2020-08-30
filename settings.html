@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Settings | Peter's Website </title>
+    <link rel="icon" href="img/colored.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<header>
+
+    <div class="align">
+    <a  href="index.html" class="logoLink">
+        <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
+    </a>
+    <h1 class="centertextMain">Hello!</h1>
+
+    <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
+        <label id="bgtoggle" style="cursor:pointer">Toggle Dark Mode!</label>
+    </button>
+</div>
+
+</header>
+
+<hr style="margin-bottom:20px; margin-left:20px; margin-right:20px; margin-top: auto;">
+
+<body onload="init()">
+
+<div style="height: 40px">
+    <ul class="navbar" id="navbar">
+        <li><a class="navbutton left" href="index.html"><b>Home</b></a></li>
+        <li><a class="navbutton left" href="about.html"><b>About</b></a></li>
+        <li><a class="navbutton left" href="HouseGames.html"><b>House Games</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 2</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 3</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 4</b></a></li>
+        <li><a class="navbutton active" href="settings.html" style="float: right"><b>Settings</b></a></li>
+</ul>
+</div>
+
+<h1> Color Palettes </h1>
+
+<div style="border: 2px solid black; margin: 25px; box-shadow: 0 0 10px 2px white; border-radius: 8px; padding: 10px;">
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="011255836234500771">new CoolorsPaletteWidget("011255836234500771", ["696d7d","6f9283","8d9f87","cdc6a5","f0dcca"]); </script>
+<hr>
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="004336590187185241">new CoolorsPaletteWidget("004336590187185241", ["ee6c4d","f9cb40","bced09","1c7c54","336270","274954","1a3138","13252a","0d181c","060c0e"]); </script>
+</div>
+
+</body>
+</html>

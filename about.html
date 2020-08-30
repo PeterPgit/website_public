@@ -9,23 +9,34 @@
     <script src="scripts.js"></script>
 </head>
 
-<header class="align">
-    <a href="index.html">
-        <img src="img/colored.jpeg" alt="Website logo" class="logoMain">
-    </a>
-    <h1 class="centertextMain">About</h1>
+<header>
+    <div class="align">
+        <a  href="index.html" class="logoLink">
+            <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
+        </a>
+        <h1 class="centertextMain">About</h1>
 
         <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
-        <label id="bgtoggle">Toggle Dark Mode!</label>
-    </button>
-
+            <label id="bgtoggle" style="cursor:pointer">Toggle Dark Mode!</label>
+        </button>
+    </div>
 </header>
 
-<hr>
+<hr style="margin-bottom:20px; margin-left:20px; margin-right:20px; margin-top: auto;">
 
-<body onload="darkCheck()">
+<body onload="init()">
+<div style="height: 40px">
+    <ul class="navbar" id="navbar">
+        <li><a class="navbutton left" href="index.html"><b>Home</b></a></li>
+        <li><a class="navbutton left active" href="about.html"><b>About</b></a></li>
+        <li><a class="navbutton left" href="HouseGames.html"><b>House Games</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 2</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 3</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 4</b></a></li>
+        <li><a class="navbutton" href="settings.html" style="float: right"><b>Settings</b></a></li>
+</ul>
+</div>
 Second test
-<a href="index.html"><b>Home</b></a>
 
 </body>
 </html>

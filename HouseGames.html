@@ -8,25 +8,36 @@
     <script src="scripts.js"></script>
 </head>
 
-<header class="align">
-
-    <a href="index.html">
-        <img src="img/colored.jpeg" alt="Website logo" class="logoMain">
-    </a>
-    <h1 class="centertextMain">House Games</h1>
+<header>
+    <div class="align">
+        <a  href="index.html" class="logoLink">
+            <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
+        </a>
+        <h1 class="centertextMain">House Games</h1>
 
         <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
-        <label id="bgtoggle">Toggle Dark Mode!</label>
-    </button>
-
+            <label id="bgtoggle" style="cursor:pointer">Toggle Dark Mode!</label>
+        </button>
+    </div>
 </header>
 
-<hr>
+<hr style="margin-bottom:20px; margin-left:20px; margin-right:20px; margin-top: auto;">
 
-<body onload="darkCheck()">
+<body onload="init()">
+<div style="height: 40px">
+    <ul class="navbar" id="navbar">
+        <li><a class="navbutton left" href="index.html"><b>Home</b></a></li>
+        <li><a class="navbutton left" href="about.html"><b>About</b></a></li>
+        <li><a class="navbutton left active" href="HouseGames.html"><b>House Games</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 2</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 3</b></a></li>
+        <li><a class="navbutton left" href="#"><b>Btn 4</b></a></li>
+        <li><a class="navbutton" href="settings.html" style="float: right"><b>Settings</b></a></li>
+</ul>
+</div>
 <h4>Here are a list of house games!</h4>
 <ul>
-    <li><a href="https://spyfall.tannerkrewson.com/">Spyfall</a></li>
+    <li><a href="https://spyfall.tannerkrewson.com/" style="text-decoration: none; color: inherit;">Spyfall</a></li>
     <dt>- "In short, when the game begins, one random player will become the spy,
         and all others will be given a location, and a role within the location. For example,
         if the location of a round was "restaurant," one player might be the chef, another the
@@ -35,7 +46,7 @@
         best not to outright reveal the location in their questions and answers, but not being too
         vague as to raise suspicion." </dt>
     <li>Game 2</li>
-    <dt>- This is the second game in the list!</dt>
+    <dt style="padding-bottom: 500px">- This is the second game in the list!</dt>
 </ul>
 <a href="index.html"><b>Home</b></a>
 </body>
