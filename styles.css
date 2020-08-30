@@ -1,124 +1,199 @@
 /* Content -> Padding -> Border -> Margin */
 .logoMain {
-    display:block;
-    border-radius: 8px;
-    border: 2px solid black;
-    padding: 5px;
-    width: 75px;
-    height: 75px;
-    float: left;
-    transition-duration: 0.4s;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid black;
+  padding: 5px;
+  width: 75px;
+  height: 75px;
+  float: left;
+  transition-duration: 0.4s;
 }
+
 a.logoLink {
-    display: block;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    width: 89px;
-    height: 89px;
+  display: block;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  width: 89px;
+  height: 89px;
 }
+
 .logoMain:hover {
-    /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
-    box-shadow: 0 0 5px 2px red;
+  /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+  box-shadow: 0 0 5px 2px red;
 }
+
 .centertextMain {
-    padding-left: auto;
+  padding-left: auto;
 }
+
 .textTest {
-    color: blue;
-    font-size: 200%;
-    border: 2px solid red;
-    display: inline;
+  color: blue;
+  font-size: 200%;
+  border: 2px solid red;
+  display: inline;
 }
+
 body {
-    font-family: Monaco;
-    background-color: white;
-    color: #black;
-    transition-duration: 0.4s;
+  font-family: Monaco;
+  background-color: white;
+  color: #black;
+  transition-duration: 0.4s;
 }
+
 .navbar {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1;
 }
-.navbutton {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    /* padding: length|initial|inherit; */
-    padding: 10px 12px;
-    transition-duration: 0.4s;
-}
+
 .navbar a.active {
-    background-color: #6f9283;
-    color: white;
+  background-color: #6f9283;
+  color: white;
 }
+
+.navbutton {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  /* padding: length|initial|inherit; */
+  padding: 10px 12px;
+  transition-duration: 0.4s;
+}
+
+.navbar li a:not(.floatright) {
+  display: block;
+  float: left;
+}
+
 .navbutton:hover {
-    background-color: #f0dcca;
-    color: black;
+  background-color: #f0dcca;
+  color: black;
 }
+
 .navbutton.special {
-    background: none;
-    border: 2px solid white;
-    border-radius: 5px
+  background: none;
+  border-radius: 5px
 }
+
 .navbutton.special:hover {
-    border: 2px solid #EE6C4D;
-    color: #EE6C4D;
-    }
+  background-color: #f0dcca;
+  color: black;
+}
+
+.navbar .icon-stack {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar li:not(:first-child) {
+    display: none;
+  }
+
+  .navbar li.icon-stack {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .navbar.responsive li.icon-stack {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .navbar.responsive li {
+    clear: both;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .navbar.responsive li a {
+    clear: both;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 .sticky {
-    position: fixed;
-    top:0;
-    width: 99%;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 99%;
+  z-index: 1;
 }
 
 div.align {
-    display: flex;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
-.button {
-    border: none;
-    color: white;
-    background-color: black;
-    padding: 10px 22px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.button.dark-mode {
 
+.button {
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
+
+.button:hover {
+  background-color: #73ADBF;
+  transition-duration: 0.5s;
+}
+
 .button.dark-mode:hover {
-    background-color: #f9cb40 !important;
-    transition-duration: 0.5s;
+  background-color: #f9cb40 !important;
+  color: black !important;
+  transition-duration: 0.5s;
 }
+
 .dark-mode {
-    background-color: #152028;
-    color: #f0dcca;
-    transition-duration: 0.4s;
+  background-color: #152028;
+  color: #f0dcca;
+  transition-duration: 0.4s;
 }
+
 hr {
-    margin: 20px;
+  margin: 20px;
 }
 
 /* Loading */
 body:not(.loaded) {
-    display:none
+  display: none
 }
+
 /* Adjustments */
 .left {
-    float: left;
+  float: left;
 }
+
 .right {
-    margin-left: auto;
+  margin-left: auto;
 }
+
+.floatright {
+  float: right;
+}
+
 .clear {
-    clear: both;
+  clear: both;
+}
+
+.slow {
+  transition-duration: .4s
 }

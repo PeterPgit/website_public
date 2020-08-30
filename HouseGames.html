@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" name="viewport"
-    content="width=device-width,initial-scale=1.0">
-    <title>House Games | Peter's Website </title>
+
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> House Games | Peter's Website </title>
     <link rel="icon" href="img/colored.jpeg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="scripts.js"></script>
-</head>
+  </head>
 
-<header>
+  <header>
     <div class="align">
-        <a  href="index.html" class="logoLink">
-            <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
-        </a>
-        <h1 class="centertextMain">House Games</h1>
+      <a href="index.html" class="logoLink">
+        <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
+      </a>
+      <h1 class="centertextMain">House Games</h1>
 
-        <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
-            <label id="bgtoggle" style="cursor:pointer">Toggle Dark Mode!</label>
-        </button>
+      <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
+        <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
+      </button>
     </div>
-</header>
 
-<hr style="margin-bottom:20px; margin-left:20px; margin-right:20px; margin-top: auto;">
+    <hr style="margin-bottom:20px; margin-left:20px; margin-right:20px; margin-top: auto;">
 
-<body onload="init()">
-<div style="height: 40px">
-    <ul class="navbar" id="navbar">
-        <li><a class="navbutton left" href="index.html"><b>Home</b></a></li>
-        <li><a class="navbutton left" href="about.html"><b>About</b></a></li>
-        <li><a class="navbutton left active" href="HouseGames.html"><b>House Games</b></a></li>
-        <li><a class="navbutton left" href="#"><b>Btn 2</b></a></li>
-        <li><a class="navbutton left" href="#"><b>Btn 3</b></a></li>
-        <li><a class="navbutton left" href="#"><b>Btn 4</b></a></li>
-        <li><a class="navbutton" href="settings.html" style="float: right"><b>Settings</b></a></li>
-</ul>
-</div>
-<h4>Here are a list of house games!</h4>
-<ul>
-    <li><a href="https://spyfall.tannerkrewson.com/" style="text-decoration: none; color: inherit;">Spyfall</a></li>
-    <dt>- "In short, when the game begins, one random player will become the spy,
+    <div style="height: 40px;">
+      <ul class="navbar" id="navbar">
+        <li><a class="navbutton" href="index.html"><b>Home</b></a></li>
+        <li><a class="navbutton" href="about.html"><b>About</b></a></li>
+        <li><a class="navbutton active" href="HouseGames.html"><b>House Games</b></a></li>
+        <li><a class="navbutton" href="#"><b>Btn 4</b></a></li>
+        <li><a class="navbutton" href="#"><b>Btn 5</b></a></li>
+        <li id="navSpecial"><a class="navbutton floatright" href="settings.html"><b>Settings</b></a></li>
+        <li class="icon-stack"><a href="javascript:void(0);" class="navbutton" onclick="reactNav()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </header>
+
+  <body onload="init()">
+
+    <hr style="margin-bottom:20px; margin-left:20px; margin-right:20px; margin-top: 20px;">
+
+    <h4>Here are a list of house games!</h4>
+    <ul>
+      <li><a href="https://spyfall.tannerkrewson.com/" style="text-decoration: none; color: inherit;">Spyfall</a></li>
+      <dt>- "In short, when the game begins, one random player will become the spy,
         and all others will be given a location, and a role within the location. For example,
         if the location of a round was "restaurant," one player might be the chef, another the
         waiter, another the customer, etc. The players will not know who the spy is, and the spy
         will not know the location. Players take turns asking questions to each other, doing their
         best not to outright reveal the location in their questions and answers, but not being too
         vague as to raise suspicion." </dt>
-    <li>Game 2</li>
-    <dt style="padding-bottom: 500px">- This is the second game in the list!</dt>
-</ul>
-<a href="index.html"><b>Home</b></a>
-</body>
+      <li>Game 2</li>
+      <dt style="padding-bottom: 500px">- This is the second game in the list!</dt>
+    </ul>
+  </body>
+
 </html>
