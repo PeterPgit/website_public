@@ -37,10 +37,53 @@ a.logoLink {
 }
 
 body {
-  font-family: Monaco;
-  background-color: white;
-  color: #black;
+  font-family: Courier;
+  background-color: #fffaf0;
+  color: black;
   transition-duration: 0.4s;
+}
+
+body a{
+  color: black;
+}
+
+body ul li a:hover {
+  color: #8D9F87;
+}
+
+.blog h1 a {
+    color: black;
+}
+
+.blog h3 {
+    color:#1a202c;
+}
+
+.blog h3 a {
+    color:#1a202c;
+    text-decoration:none;
+}
+
+.blog h3 a:hover {
+    color:#8D9F87;
+}
+
+.blog p {
+    color:#718096;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.blog a {
+  text-decoration:none;
+}
+
+.blog h1 a:hover {
+  color:#8D9F87;
+}
+
+.blog.navbar a {
+  color: black;
 }
 
 .navbar {
@@ -52,9 +95,22 @@ body {
   z-index: 1;
 }
 
+.blog .navbar{
+  transition-duration: .5s;
+}
+
 .navbar a.active {
   background-color: #6f9283;
   color: white;
+}
+
+.navbar li a:not(.floatright) {
+  display: block;
+  float: left;
+}
+
+.navbar .icon-stack {
+  display: none;
 }
 
 .navbutton {
@@ -63,12 +119,7 @@ body {
   text-decoration: none;
   /* padding: length|initial|inherit; */
   padding: 10px 12px;
-  transition-duration: 0.4s;
-}
-
-.navbar li a:not(.floatright) {
-  display: block;
-  float: left;
+  transition-duration: 0.5s;
 }
 
 .navbutton:hover {
@@ -84,10 +135,6 @@ body {
 .navbutton.special:hover {
   background-color: #f0dcca;
   color: black;
-}
-
-.navbar .icon-stack {
-  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -134,6 +181,11 @@ body {
   z-index: 1;
 }
 
+.blog .sticky {
+  opacity: .8;
+  transition-duration: .4s;
+}
+
 div.align {
   display: flex;
   align-items: center;
@@ -142,8 +194,8 @@ div.align {
 
 .button {
   border: none;
-  color: white;
   background-color: black;
+  color: white;
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
@@ -151,25 +203,66 @@ div.align {
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #73ADBF;
-  transition-duration: 0.5s;
+.dark-mode .navbutton {
+  color:white;
 }
 
-.button.dark-mode:hover {
-  background-color: #f9cb40 !important;
-  color: black !important;
+.button:hover {
+  background-color: #73ADBF !important;
   transition-duration: 0.5s;
 }
 
 .dark-mode {
   background-color: #152028;
-  color: #f0dcca;
+  color: #C4CAD4;
   transition-duration: 0.4s;
 }
 
+.dark-mode a {
+  color: #f0dcca;
+}
+
+.blog.dark-mode {
+  background-color: #152028;
+  color: #C4CAD4;
+  transition-duration: 0.4s;
+}
+
+.blog.dark-mode h3 a{
+  color: #f0dcca;
+}
+
+.blog.dark-mode h3{
+  color: #f0dcca;
+}
+
+.blog.dark-mode h3 a:hover{
+  color: #8D9F87;
+}
+
+.blog.dark-mode h1 a {
+  color: #f0dcca;
+}
+
+.blog.dark-mode h1 a:hover {
+  color: #8D9F87;
+}
+
+.blog.dark-mode p {
+  color: #C4CAD4;
+}
+
+.button.dark-mode:hover {
+  background-color: #f9cb40;
+  color: black;
+  transition-duration: 0.5s;
+}
+
 hr {
-  margin: 20px;
+ margin-bottom:20px;
+ margin-left:20px;
+ margin-right:20px;
+ margin-top: auto;
 }
 
 /* Loading */

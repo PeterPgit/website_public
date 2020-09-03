@@ -6,23 +6,23 @@ function darktoggle() {
 
   // Changes page to dark mode, sets storage to remember selection
   if (localStorage.getItem("dark-mode") == "false") {
-    bgtoggle.classList.add("fa-sun")
-    bgtoggle.classList.remove("fa-moon")
+    bgtoggle.classList.add("fa-sun");
+    bgtoggle.classList.remove("fa-moon");
     darkbtn.style.backgroundColor = "white";
-    darkbtn.style.color = "black"
-    logo.style.border = "2px solid white"
-    localStorage.setItem("dark-mode", "true")
-    element.classList.toggle("dark-mode")
-    darkbtn.classList.toggle("dark-mode")
+    darkbtn.style.color = "black";
+    logo.style.border = "2px solid white";
+    localStorage.setItem("dark-mode", "true");
+    element.classList.toggle("dark-mode");
+    darkbtn.classList.toggle("dark-mode");
   } else {
-    bgtoggle.classList.add("fa-moon")
-    bgtoggle.classList.remove("fa-sun")
+    bgtoggle.classList.add("fa-moon");
+    bgtoggle.classList.remove("fa-sun");
     darkbtn.style.backgroundColor = "black";
-    darkbtn.style.color = "white"
-    logo.style.border = "2px solid black"
-    localStorage.setItem("dark-mode", "false")
-    element.classList.toggle("dark-mode")
-    darkbtn.classList.toggle("dark-mode")
+    darkbtn.style.color = "white";
+    logo.style.border = "2px solid black";
+    localStorage.setItem("dark-mode", "false");
+    element.classList.toggle("dark-mode");
+    darkbtn.classList.toggle("dark-mode");
   }
 }
 
@@ -32,10 +32,47 @@ function darkCheck() {
   var darkbtn = document.getElementById("darkbtn");
   var logo = document.getElementById("logo");
   if (localStorage.getItem("dark-mode") == "true") {
-    bgtoggle.classList.add("fa-sun")
+    bgtoggle.classList.add("fa-sun");
     darkbtn.style.backgroundColor = "white";
     darkbtn.style.color = "black";
     logo.style.border = "2px solid white";
+    element.classList.toggle("dark-mode");
+    darkbtn.classList.toggle("dark-mode");
+  }
+}
+
+function darktoggleBlog() {
+  var bgtoggle = document.getElementById("bgtoggle");
+  var darkbtn = document.getElementById("darkbtn");
+  var element = document.body;
+
+  if (localStorage.getItem("dark-mode") == "false") {
+    bgtoggle.classList.add("fa-sun");
+    bgtoggle.classList.remove("fa-moon");
+    darkbtn.style.backgroundColor = "white";
+    darkbtn.style.color = "black";
+    localStorage.setItem("dark-mode", "true");
+    element.classList.toggle("dark-mode");
+    darkbtn.classList.toggle("dark-mode");
+  } else {
+    bgtoggle.classList.add("fa-moon");
+    bgtoggle.classList.remove("fa-sun");
+    darkbtn.style.backgroundColor = "black";
+    darkbtn.style.color = "white";
+    localStorage.setItem("dark-mode", "false");
+    element.classList.toggle("dark-mode");
+    darkbtn.classList.toggle("dark-mode");
+  }
+}
+
+function darkCheckBlog() {
+  var element = document.body;
+  var bgtoggle = document.getElementById("bgtoggle");
+  var darkbtn = document.getElementById("darkbtn");
+  if (localStorage.getItem("dark-mode") == "true") {
+    bgtoggle.classList.add("fa-sun");
+    darkbtn.style.backgroundColor = "white";
+    darkbtn.style.color = "black";
     element.classList.toggle("dark-mode");
     darkbtn.classList.toggle("dark-mode");
   }
@@ -47,7 +84,7 @@ function reactNav() {
   if (x.className === "navbar") {
     x.className += " responsive";
   } else {
-    x.className = "navbar"
+    x.className = "navbar";
   }
 }
 
@@ -72,6 +109,11 @@ function init() {
   stickyNav();
 }
 
+function initBlog() {
+  darkCheckBlog();
+  load();
+}
+
 function load() {
-  document.body.classList.add('loaded')
+  document.body.classList.add('loaded');
 }

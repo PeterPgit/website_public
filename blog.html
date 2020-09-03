@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    <title> About | Peter's Website </title>
+    <title> Welcome | Peter's Website </title>
     <link rel="icon" href="img/colored.jpeg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -15,8 +15,7 @@
       <a href="index.html" class="logoLink">
         <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
       </a>
-      <h1 class="centertextMain title">about</h1>
-
+      <h1 class="centertextMain title">notes</h1>
       <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
         <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
       </button>
@@ -27,9 +26,9 @@
     <div style="height: 40px;">
       <ul class="navbar" id="navbar">
         <li><a class="navbutton" href="index.html">home</a></li>
-        <li><a class="navbutton active" href="about.html">about</a></li>
+        <li><a class="navbutton" href="about.html">about</a></li>
         <li><a class="navbutton" href="housegames.html">house games</a></li>
-        <li><a class="navbutton" href="blog.html">notes</a></li>
+        <li><a class="navbutton active" href="blog.html">notes</a></li>
         <li><a class="navbutton" href="favorites.html">favorites</a></li>
         <li id="navSpecial"><a class="navbutton floatright" href="settings.html">settings</a></li>
         <li class="icon-stack"><a href="javascript:void(0);" class="navbutton" onclick="reactNav()">
@@ -41,12 +40,16 @@
 
   </header>
 
-  <body onload="init()">
+<body onload="init()" class="blog">
 
     <hr style="margin-top: 20px;">
 
-    Second test
+    <h3><a href="blog/testblog.html">testing 123</a></h3>
 
-  </body>
+    <p class="date">Aug 30, 2020</p>
 
+    <p class="desc" style="margin-bottom: 1000px;"> testing test.</p>
+
+    <hr>
+</body>
 </html>
