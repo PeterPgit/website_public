@@ -127,6 +127,10 @@ body ul li a:hover {
   color: black;
 }
 
+.dark-mode .navbutton:hover {
+  color: black;
+}
+
 .navbutton.special {
   background: none;
   border-radius: 5px
@@ -252,8 +256,8 @@ div.align {
   color: #C4CAD4;
 }
 
-.button.dark-mode:hover {
-  background-color: #f9cb40;
+.dark-mode .button:hover {
+  background-color: #f9cb40 !important;
   color: black;
   transition-duration: 0.5s;
 }
