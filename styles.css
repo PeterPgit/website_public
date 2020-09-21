@@ -1,4 +1,5 @@
 /* Content -> Padding -> Border -> Margin */
+/* .class #id */
 .logoMain {
   display: block;
   border-radius: 8px;
@@ -29,73 +30,64 @@ a.logoLink {
   padding-left: auto;
 }
 
-.textTest {
-  color: blue;
-  font-size: 200%;
-  border: 2px solid red;
-  display: inline;
-}
-
 body {
   font-family: Courier;
   background-color: #fffaf0;
   color: black;
   transition-duration: 0.4s;
+  padding: 0px;
+  margin: 0px;
 }
 
-body a{
+body a {
   color: black;
+  transition-duration: 0.4s;
 }
 
-body ul li a:hover {
-  color: #8D9F87;
+body div ul li a:hover {
+  background-color: #8D9F87;
+  color: white;
 }
 
 .blog h1 a {
-    color: black;
+  color: black;
 }
 
 .blog h3 {
-    color:#1a202c;
+  color: #1a202c;
 }
 
 .blog h3 a {
-    color:#1a202c;
-    text-decoration:none;
+  color: #1a202c;
 }
 
 .blog h3 a:hover {
-    color:#8D9F87;
+  color: #8D9F87;
 }
 
 .blog p {
-    color:#718096;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.blog a {
-  text-decoration:none;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .blog h1 a:hover {
-  color:#8D9F87;
+  color: #8D9F87;
 }
 
-.blog.navbar a {
-  color: black;
+.blog .title {
+  transition-duration: .4s;
 }
 
 .navbar {
   list-style-type: none;
-  margin: 0 auto;
+  margin-left: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
   z-index: 1;
 }
 
-.blog .navbar{
+.blog .navbar {
   transition-duration: .5s;
 }
 
@@ -127,10 +119,6 @@ body ul li a:hover {
   color: black;
 }
 
-.dark-mode .navbutton:hover {
-  color: black;
-}
-
 .navbutton.special {
   background: none;
   border-radius: 5px
@@ -142,6 +130,7 @@ body ul li a:hover {
 }
 
 @media screen and (max-width: 600px) {
+
   .navbar li:not(:first-child) {
     display: none;
   }
@@ -150,9 +139,7 @@ body ul li a:hover {
     float: right;
     display: block;
   }
-}
 
-@media screen and (max-width: 600px) {
   .navbar.responsive {
     position: relative;
   }
@@ -176,12 +163,26 @@ body ul li a:hover {
     display: block;
     text-align: left;
   }
+
+  /* For Mobile */
+  ul.icon-bar {
+    float: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  ul.icon-bar li {
+    display: block;
+  }
+
 }
 
 .sticky {
   position: fixed;
   top: 0;
-  width: 99%;
+  width: 100%;
   z-index: 1;
 }
 
@@ -205,10 +206,7 @@ div.align {
   text-decoration: none;
   border-radius: 8px;
   cursor: pointer;
-}
-
-.dark-mode .navbutton {
-  color:white;
+  outline: none;
 }
 
 .button:hover {
@@ -216,57 +214,73 @@ div.align {
   transition-duration: 0.5s;
 }
 
-.dark-mode {
-  background-color: #152028;
-  color: #C4CAD4;
-  transition-duration: 0.4s;
-}
-
-.dark-mode a {
-  color: #f0dcca;
-}
-
-.blog.dark-mode {
-  background-color: #152028;
-  color: #C4CAD4;
-  transition-duration: 0.4s;
-}
-
-.blog.dark-mode h3 a{
-  color: #f0dcca;
-}
-
-.blog.dark-mode h3{
-  color: #f0dcca;
-}
-
-.blog.dark-mode h3 a:hover{
-  color: #8D9F87;
-}
-
-.blog.dark-mode h1 a {
-  color: #f0dcca;
-}
-
-.blog.dark-mode h1 a:hover {
-  color: #8D9F87;
-}
-
-.blog.dark-mode p {
-  color: #C4CAD4;
-}
-
-.dark-mode .button:hover {
-  background-color: #f9cb40 !important;
-  color: black;
-  transition-duration: 0.5s;
+header hr {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: auto;
 }
 
 hr {
- margin-bottom:20px;
- margin-left:20px;
- margin-right:20px;
- margin-top: auto;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.float {
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 white, 10px 10px 0 #A2A2A0;
+  margin: 5px;
+}
+
+footer .icon-bar {
+  font-size: 35px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  list-style-type: none;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+}
+
+footer .icon-bar li {
+  display: inline-block;
+  padding: 0;
+}
+
+footer .icon-bar li a {
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: slategrey;
+  color: #fffaf0;
+  position: relative;
+}
+
+.fa-github-square:hover {
+  background-color: #8D9F87;
+  transition-duration: .3s;
+  opacity: .8;
+}
+
+.fa-file-code:hover {
+  background-color: #8D9F87;
+  transition-duration: .3s;
+  opacity: .8;
+}
+
+.fa-envelope:hover {
+  background-color: #8D9F87;
+  transition-duration: .3s;
+  opacity: .8;
+}
+
+#colorPallet {
+  list-style: none;
 }
 
 /* Loading */
@@ -293,4 +307,9 @@ body:not(.loaded) {
 
 .slow {
   transition-duration: .4s
+}
+
+#colorPallet.float ul li {
+  display: block;
+  margin: 0 auto;
 }

@@ -1,72 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    <title> Welcome | Peter's Website </title>
-    <link rel="icon" href="img/colored.jpeg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <script src="scripts.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Welcome | Peter's Website </title>
+  <link rel="icon" href="img/colored.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles_dark.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script src="scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="my_jquery.js"></script>
+</head>
 
-  <header>
-    <div class="align">
-      <a href="index.html" class="logoLink">
-        <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
-      </a>
-      <h1 class="centertextMain title">hello!</h1>
+<header>
+  <div class="align">
+    <a href="index.html" class="logoLink">
+      <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
+    </a>
+    <h1 class="centertextMain title">hello!</h1>
+    <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
+      <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
+    </button>
+  </div>
 
-      <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
-        <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
-      </button>
-    </div>
+  <hr>
 
-    <hr>
+  <div style="height: 40px;" id="nav-container">
+  </div>
 
-    <div style="height: 40px;">
-      <ul class="navbar" id="navbar">
-        <li><a class="navbutton active" href="index.html">home</a></li>
-        <li><a class="navbutton" href="about.html">about</a></li>
-        <li><a class="navbutton" href="housegames.html">house games</a></li>
-        <li><a class="navbutton" href="blog.html">notes</a></li>
-        <li><a class="navbutton" href="favorites.html">favorites</a></li>
-        <li id="navSpecial"><a class="navbutton floatright" href="settings.html">settings</a></li>
-        <li class="icon-stack"><a href="javascript:void(0);" class="navbutton" onclick="reactNav()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
+</header>
 
-  </header>
+<body onload="init()">
+  <hr>
 
-  <body onload="init()">
+  <button onclick="stickyNav()">Activate</button>
 
-    <hr style="margin-top: 20px;">
+  <h2>house games</h2>
 
-    <ul style="border: 2px solid black; margin: 25px; box-shadow: 0 0 10px 2px white">
-      <li style="color:#696D7D;">
-        <p style="color:#696D7D;" class="textTest"><b>696D7D</b></p>
+  <div class="float" style="margin: 25px;" id="main-container">
+    <h4 style="margin-left: 10px;">Here are a list of house games!</h4>
+    <ul>
+      <li><a href="https://spyfall.tannerkrewson.com/" target="_blank" rel="noopener noreferrer">Spyfall</a>
+        <p>- "In short, when the game begins, one random player will become the spy,
+          and all others will be given a location, and a role within the location. For example,
+          if the location of a round was "restaurant," one player might be the chef, another the
+          waiter, another the customer, etc. The players will not know who the spy is, and the spy
+          will not know the location. Players take turns asking questions to each other, doing their
+          best not to outright reveal the location in their questions and answers, but not being too
+          vague as to raise suspicion." </p>
       </li>
-      <li style="color:#6F9283;">
-        <p style="color:#6F9283;"><b>6F9283</b></p>
+      <li><a href="https://drawphone.tannerkrewson.com/" target="_blank" rel="noopener noreferrer">Drawphone</a>
+        <p>- "It works like the telephone game, in which "one person whispers a message
+          to another, which is passed through a line of people until the last player
+          announces the message to the entire group."
+          <br>
+          - Minimum of 4 players
+        </p>
       </li>
-      <li style="color:#8D9F87;">
-        <p style="color:#8D9F87;"><b>8D9F87</b></p>
-      </li>
-      <li style="color:#CDC6A5;">
-        <p style="color:#CDC6A5;"><b>CDC6A5</b></p>
-      </li>
-      <li style="color:#F0DCCA;">
-        <p style="color:#F0DCCA;"><b>F0DCCA</b></p>
-      </li>
-
     </ul>
+  </div>
 
-    <p style="padding-bottom: 1000px">lots of text</p>
-    <p> lots of text</p>
-    <hr>
-  </body>
+  <h2>color pallets</h2>
+  <div class="float" id="colorPallet" style="margin: 25px;text-align: center;">
+    <ul>
+      <li style="color: #1a202c;"><b>#1a202c</b></li>
+      <li style="color: #333;"><b>#333</b></li>
+      <li style="color: #6f9283;"><b>#6f9283</b></li>
+      <li style="color: #73ADBF;"><b>#73ADBF</b></li>
+      <li style="color: #8D9F87;"><b>#8D9F87</b></li>
+      <li style="color: #A2A2A0;"><b>#A2A2A0</b></li>
+      <li style="color: #f0dcca;"><b>#f0dcca</b></li>
+      <li style="color: #fffaf0;"><b>#fffaf0</b></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <footer id=footer-container>
+  </footer>
+
+  <script>
+    function setActive() {
+      var active = document.getElementById("homebtn");
+      active.classList.add("active");
+    }
+  </script>
+</body>
 
 </html>

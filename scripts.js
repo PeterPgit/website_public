@@ -3,6 +3,7 @@ function darktoggle() {
   var darkbtn = document.getElementById("darkbtn");
   var element = document.body;
   var logo = document.getElementById("logo");
+  var float = document.querySelectorAll('.float');
 
   // Changes page to dark mode, sets storage to remember selection
   if (localStorage.getItem("dark-mode") == "false") {
@@ -14,6 +15,9 @@ function darktoggle() {
     localStorage.setItem("dark-mode", "true");
     element.classList.toggle("dark-mode");
     darkbtn.classList.toggle("dark-mode");
+    if (typeof float !== "undefined") {
+      floatToggle();
+    }
   } else {
     bgtoggle.classList.add("fa-moon");
     bgtoggle.classList.remove("fa-sun");
@@ -23,6 +27,9 @@ function darktoggle() {
     localStorage.setItem("dark-mode", "false");
     element.classList.toggle("dark-mode");
     darkbtn.classList.toggle("dark-mode");
+    if (typeof float !== "undefined") {
+      floatToggle();
+    }
   }
 }
 
@@ -31,6 +38,8 @@ function darkCheck() {
   var bgtoggle = document.getElementById("bgtoggle");
   var darkbtn = document.getElementById("darkbtn");
   var logo = document.getElementById("logo");
+  var float = document.querySelectorAll('.float');
+
   if (localStorage.getItem("dark-mode") == "true") {
     bgtoggle.classList.add("fa-sun");
     darkbtn.style.backgroundColor = "white";
@@ -38,6 +47,9 @@ function darkCheck() {
     logo.style.border = "2px solid white";
     element.classList.toggle("dark-mode");
     darkbtn.classList.toggle("dark-mode");
+    if (typeof float !== "undefined") {
+      floatToggle();
+    }
   }
 }
 
@@ -91,10 +103,9 @@ function reactNav() {
 function stickyNav() {
   var navbar = document.getElementById("navbar");
   var navTop = navbar.offsetTop;
+  console.log('stickyNav loaded');
 
-  window.addEventListener('scroll', function() {
-    console.log('navTop = ' + navTop);
-    console.log('scrollY = ' + window.scrollY);
+  window.addEventListener('scroll', function () {
     if (window.scrollY >= navTop) {
       navbar.classList.add("sticky");
     } else {
@@ -106,6 +117,7 @@ function stickyNav() {
 function init() {
   darkCheck();
   load();
+  setActive();
   stickyNav();
 }
 

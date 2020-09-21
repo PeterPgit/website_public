@@ -1,0 +1,62 @@
+.dark-mode .navbutton:hover:not(.active) {
+    color: black;
+}
+
+.dark-mode .navbutton {
+    color: white;
+}
+
+.dark-mode {
+    background-color: #152028;
+    color: #C4CAD4;
+    transition-duration: 0.4s;
+}
+
+.dark-mode a {
+    color: #f0dcca;
+    transition-duration: 0.4s;
+}
+
+.blog.dark-mode {
+    background-color: #152028;
+    color: #C4CAD4;
+    transition-duration: 0.4s;
+}
+
+.blog.dark-mode h3 a {
+    color: #f0dcca;
+}
+
+.blog.dark-mode h3 {
+    color: #f0dcca;
+}
+
+.blog.dark-mode h3 a:hover {
+    color: #8D9F87;
+}
+
+.blog.dark-mode h1 a {
+    color: #f0dcca;
+}
+
+.blog.dark-mode h1 a:hover {
+    color: #8D9F87;
+}
+
+.blog.dark-mode p {
+    color: #C4CAD4;
+    transition-duration: 0.4s;
+}
+
+.dark-mode .button:hover {
+    background-color: #f9cb40 !important;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+.darkFloat {
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 black, 10px 10px 0 white;
+    margin: 5px;
+}
