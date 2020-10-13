@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-  <title> Welcome | Peter's Website </title>
+  <title> Resume | Peter's Website </title>
   <link rel="icon" href="img/colored.jpeg">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles_dark.css">
@@ -18,7 +18,7 @@
     <a href="index.html" class="logoLink">
       <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
     </a>
-    <h1 class="centertextMain">resume</h1>
+    <h1 class="centertextMain title">resume</h1>
 
     <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
       <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
@@ -27,7 +27,8 @@
 
   <hr>
 
-  <div style="height: 40px;" id="nav-container">
+  <div style="height: 40px;">
+    <div id="nav-container"> </div>
   </div>
 
 </header>
@@ -36,13 +37,21 @@
 
   <hr>
 
+  <div>
+    <p> something will be added here, eventually...</p>
+  </div>
+  
   <hr>
-  <script>
-    function setActive() {
-      var active = document.getElementById("resumebtn");
-      active.classList.add("active");
-    }
-  </script>
+
+  <footer id=footer-container>
+    <script>
+      function setActive() {
+        var active = document.getElementById("resumebtn");
+        active.classList.add("active");
+        console.log("setActive loaded")
+      }
+    </script>
+  </footer>
 </body>
 
 </html>

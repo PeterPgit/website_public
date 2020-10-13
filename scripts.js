@@ -92,11 +92,10 @@ function darkCheckBlog() {
 
 function reactNav() {
   var x = document.getElementById("navbar");
-  var y = document.getElementById("navSpecial");
-  if (x.className === "navbar") {
-    x.className += " responsive";
+  if (x.classList.contains('responsive')) {
+    x.classList.remove("responsive");
   } else {
-    x.className = "navbar";
+    x.classList.add("responsive");
   }
 }
 
@@ -114,11 +113,21 @@ function stickyNav() {
   });
 }
 
+function pgpKey() {
+  var x = document.getElementById("pgpKey");
+  var pgpKeybtn = document.getElementById("pgpKeybtn")
+  if (x.style.display === "none") {
+    x.style.display = "table";
+    pgpKeybtn.innerHTML = "Hide PGP Key"
+  } else {
+    x.style.display = " none";
+    pgpKeybtn.innerHTML = "View PGP Key"
+  }
+}
+
 function init() {
   darkCheck();
   load();
-  setActive();
-  stickyNav();
 }
 
 function initBlog() {

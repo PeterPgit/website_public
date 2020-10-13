@@ -26,30 +26,38 @@
 
   <hr>
 
-  <div style="height: 40px;" id="nav-container">
+  <div style="height: 40px;">
+    <div id="nav-container"> </div>
   </div>
 
 </header>
 
-<body onload="init()" class="blog">
+<body onload="init()" class="blogPage">
   <hr>
 
-  <div>
-    <h3><a href="blog/testblog.html" class="title">testing 123</a></h3>
+  <section style="display: block;" id="blog-container">
 
-    <p class="date">Aug 30, 2020</p>
+    <a href="blog/testblog.html" class="blog-recent">
+      <div>
+        <h3 class=title> testing title</h3>
+        <p class="date"> testing date </p>
+        <p class="desc"> testing </p>
+      </div>
+    </a>
 
-    <p class="desc"> testing test.</p>
-  </div>
+  </section>
 
-  <hr style="margin-top: 1000px;">
+  <hr>
 
-  <script>
-    function setActive() {
-      var active = document.getElementById("blogbtn");
-      active.classList.add("active");
-    }
-  </script>
+  <footer id=footer-container>
+    <script>
+      function setActive() {
+        var active = document.getElementById("blogbtn");
+        active.classList.add("active");
+        console.log("setActive loaded")
+      }
+    </script>
+  </footer>
 </body>
 
 </html>

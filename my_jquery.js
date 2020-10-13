@@ -1,6 +1,9 @@
 // cross-page nav bar
 $(function () {
-  $("#nav-container").load("assets/navbar.html");
+  $("#nav-container").load("assets/navbar.html", function () {
+    setActive()
+    stickyNav()
+  });
   $("#footer-container").load("assets/footer.html");
 });
 
@@ -8,3 +11,7 @@ $(function () {
 function floatToggle() {
   $(".float, .darkFloat").toggleClass("float darkFloat");
 }
+
+$(function () {
+  $("#pgpKeybtn").click(function () {})
+})

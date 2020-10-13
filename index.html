@@ -18,7 +18,7 @@
     <a href="index.html" class="logoLink">
       <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
     </a>
-    <h1 class="centertextMain title">hello!</h1>
+    <h1 class="centertextMain title">welcome!</h1>
     <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
       <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
     </button>
@@ -26,19 +26,35 @@
 
   <hr>
 
-  <div style="height: 40px;" id="nav-container">
+  <div style="height: 40px;">
+    <div id="nav-container"> </div>
   </div>
 
 </header>
 
-<body onload="init()">
+<body onload="init()" id="homePage">
   <hr>
 
-  <button onclick="stickyNav()">Activate</button>
+
+  <h2>about</h2>
+  <div class="float" style="margin: 25px">
+    <p style="margin-left: 30px;">starting out as a quarantine project, this website is my very first attempt at some
+      sort of coding, with everything you see on this page written by stratch. </p>
+    <p style="margin-left: 30px;"> initially written in pycharm, I
+      transitioned to visual studio code which is what is used now to write/edit this website. everything is hosted
+      through Github Pages, and all of the source code can be viewed by
+      clicking the link at the bottom (looks like <a class="fas fa-file-code"
+        style="text-decoration: none; background-color: inherit !important;"></a>). there you'll
+      find everything written with basic html, css, and js (with hints of jquery). you can also visit my Github
+      repo to view all that i've been working on. </p>
+    <p style="margin-left: 30px;">i'm looking to learn more about pgp encryption, so linked at the bottom of this
+      page is my pgp public key. technology (digital privacy in particular) has been a huge interest of mine, and i'm always looking to learn more about anything I can. (that's why this website exists!)</p>
+    <p style="margin-left: 30px;"></p>
+  </div>
+
 
   <h2>house games</h2>
-
-  <div class="float" style="margin: 25px;" id="main-container">
+  <div class="float" id="main-container">
     <h4 style="margin-left: 10px;">Here are a list of house games!</h4>
     <ul>
       <li><a href="https://spyfall.tannerkrewson.com/" target="_blank" rel="noopener noreferrer">Spyfall</a>
@@ -61,31 +77,72 @@
     </ul>
   </div>
 
-  <h2>color pallets</h2>
-  <div class="float" id="colorPallet" style="margin: 25px;text-align: center;">
+
+  <h2> updates </h2>
+  <div class="float">
     <ul>
-      <li style="color: #1a202c;"><b>#1a202c</b></li>
-      <li style="color: #333;"><b>#333</b></li>
-      <li style="color: #6f9283;"><b>#6f9283</b></li>
-      <li style="color: #73ADBF;"><b>#73ADBF</b></li>
-      <li style="color: #8D9F87;"><b>#8D9F87</b></li>
-      <li style="color: #A2A2A0;"><b>#A2A2A0</b></li>
-      <li style="color: #f0dcca;"><b>#f0dcca</b></li>
-      <li style="color: #fffaf0;"><b>#fffaf0</b></li>
+      <li style="list-style-type: none;">
+        <p> whenever something interesting happens, that will go here! as for now, this is acting as a placeholder.</p>
+      </li>
     </ul>
+  </div>
+
+  <h2>PGP Key</h2>
+  <button onclick="pgpKey()" class="pgpKey" id="pgpKeybtn" style="margin-left:25px">View PGP Key</button>
+  <div class="float hidden"
+    style="display: none; margin-left: auto; margin-right: auto; padding-right: 20px; padding-left: 20px;" id="pgpKey">
+    <pre style="line-height: normal;">
+<b>Email: peterphaman@protonmail.com</b>
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v4.10.8
+Comment: https://openpgpjs.org
+
+xsBNBF98jkkBCACF66PjsfZY+tLetPHQ0AxMil5H9wigCzWuiuz/u0D26tfQ
+7n25B1lZs4Hd0h20hJHVxzimGANdb1mRRXU8a8L0vaPO9uAigvk6fzcO+pY/
+/kicHGxD9Vr27TK0uPSfS6PAlqsZszMeRTHuTeuyVSb+mJn9YNkfgsbZnRny
+NLjQyxwbyRED9vNek5EUxnG/pxjqRmpdEiFKYIaglNJ3RdQlOkYSq7Nn15eh
+4r25m4Nbfr3uZqxl51pYyKfRpOc7N177BpFW1rxcgeDKH0DWgUFwSNeX7wy5
+Kf5V7THACndp68iHoWP/sCKRCm4sotQ3BeWWovYTB+khk7kpZ3cvCphpABEB
+AAHNN1BldGVyUGhhbUFuQHByb3Rvbm1haWwuY29tIDxQZXRlclBoYW1BbkBw
+cm90b25tYWlsLmNvbT7CwI0EEAEIACAFAl98jkkGCwkHCAMCBBUICgIEFgIB
+AAIZAQIbAwIeAQAhCRCAugFl34dGJhYhBGnWhbtcWfhoIBqfj4C6AWXfh0Ym
+qlMH/jk7fQ+jmVhqRSeXurI78IckPwl41Fq5yiGRhrns2T27A53e0PlCVPnn
+fjWfY3vqxsnkSORS8JmXO2IKZF7KXPS6u6nrxMDiOLwTRayImtJZz+E8XTmk
+xKU6a/12rG0pkcuFK3RNuUsPbS4Sv3v0MP02oeKsnvOXRcLYvyjDz1wULHh8
+zsx1i8RLujrmDR4yuFLxPErxODj6EhmDoyiu78Zo3M7I3cIWOV71792xVn30
+zaaBMsSXUN/wGPEK/6cggexTl3k8RgVrFKCnkYdfHzIlB8fD2FvleGePUld3
+/vbGNrXuH2iPRjtYH11CK0lOPrdy7UA0CP7lcC6NPVL1aOLOwE0EX3yOSQEI
+AJ69ONXVaC2XyDhoMM0T0TXA5MLCVLxb7CTNKf7j8+HNAy2XsNWJruo2TH7C
+VcSFW/2OPlARW7FgzZOBMcvpnAlJE2t8aKmBltyU5YdfA4BmRjFzKwVJFjQO
+dtEYK/NQgJ6wp5mzBCOIBeXc1AWvhtzM7dM4235oF5BBLXEHnWLN5rM+CH+L
+O7pw2hGVZLYv1Mbxr/z7vKsrNy5DF3SDqrbA/N/3egHIvQQcMkgG4SwEJsNo
+xjTdHX1kiR6cYc960wAEuFUrVdJP3ekOr3rZiDUgs/4BOFX1tvNQE8KgbxG8
+OvyKiVpsL6Aq7E0SMPBtJqyKJ2L6EG+bgZHQkc/LOs8AEQEAAcLAdgQYAQgA
+CQUCX3yOSQIbDAAhCRCAugFl34dGJhYhBGnWhbtcWfhoIBqfj4C6AWXfh0Ym
+LacH/26GrRGgL7hWByogjV3WNQDZ6zeT7bIDAWHK6UUt8sNwSo2fLao9MZ1E
+slaLWRfbgBp6NLiRWbguwQaN1Oz/J+Sxf2241v/2LQP6+2bJuIQmwbPxloEZ
+fP9eSBpzlTz2k2E9m/g4PrKCSuLP3NBmAWzsHtv/Qb7DZa/s1CJCvdIoAeda
+yKKjyHFkgrSOXDyS3StN3r5Q4w/Ja6jLfiAwARlXCvK/5iEcI1AUPpSl3uJU
+b6mQH1igS/tYP12Mm2R1l3jDuNElZiICve4gQY/EwdusF3BdAFRk4DiWCKDj
+aI8WP3XkyOdp7yXuaj2hWjvUMVK9eVFdQowp4FTRpqKhkoU=
+=tOco
+-----END PGP PUBLIC KEY BLOCK-----
+    </pre>
   </div>
 
   <hr>
 
   <footer id=footer-container>
+    <script>
+      function setActive() {
+        var active = document.getElementById("homebtn");
+        active.classList.add("active");
+        console.log("setActive loaded")
+      }
+    </script>
   </footer>
 
-  <script>
-    function setActive() {
-      var active = document.getElementById("homebtn");
-      active.classList.add("active");
-    }
-  </script>
 </body>
 
 </html>
