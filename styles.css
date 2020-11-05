@@ -36,7 +36,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #fffaf0;
   color: black;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
   padding: 0px;
   margin: 0px;
 }
@@ -57,7 +57,6 @@ body div ul li a:hover {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  z-index: 1;
 }
 
 .navbar a.active {
@@ -78,22 +77,11 @@ body div ul li a:hover {
   display: inline-block;
   color: white;
   text-decoration: none;
-  /* padding: length|initial|inherit; */
   padding: 10px 12px;
   transition-duration: 0.5s;
 }
 
 .navbutton:hover {
-  background-color: #f0dcca;
-  color: black;
-}
-
-.navbutton.special {
-  background: none;
-  border-radius: 5px
-}
-
-.navbutton.special:hover {
   background-color: #f0dcca;
   color: black;
 }
@@ -135,6 +123,10 @@ body div ul li a:hover {
     float: none;
     display: block;
     text-align: left;
+  }
+
+  #pgpKey div p {
+    font-size: 9px;
   }
 
   /* For Mobile */
@@ -188,7 +180,7 @@ div.align {
 }
 
 .button:hover {
-  background-color: #73ADBF !important;
+  background-color: #73ADBF;
   transition-duration: 0.5s;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
@@ -226,6 +218,13 @@ hr {
   transition-duration: .3s;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container>p {}
 
 
 /* Footer Section */
@@ -285,33 +284,35 @@ footer .icon-bar li a {
 
 
 /* Blog Section */
-#blog-container {
+#blogContainer {
   background-image: url("img/FirewatchBG.jpg");
   background-size: cover;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
 }
 
-#blog-container a {
+#blogContainer a {
   text-decoration: none;
   color: black;
   background-color: #fffaf0;
   padding: 16px 24px;
-  display: block;
   transition-duration: .4s;
   border-style: solid;
   border-width: 1px 0px 1px 0px;
 }
 
-#blog-container a:hover {
+#blogContainer a:hover {
   background: transparent;
   color: white;
   border-color: transparent;
 }
 
-#blog-container div {}
+#blogContainer div {}
 
 .title {
-  margin-top: 0px;
+  margin: 0px 15px 0px 0px;
 }
 
 .date {}
@@ -320,10 +321,9 @@ footer .icon-bar li a {
   margin-bottom: 0px;
 }
 
-.blog-recent {
-  border-width: 2px 0px 1px 0px;
+.blocks {
+  display: flex;
 }
-
 /* Blog Section */
 
 
@@ -358,6 +358,13 @@ body:not(.dark-mode) #favorites ul li a {
   border-radius: 8px;
   cursor: pointer;
   outline: none;
+}
+
+#pgpKey {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 /* PGP Key Section */

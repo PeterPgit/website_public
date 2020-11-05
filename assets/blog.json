@@ -1,0 +1,24 @@
+{
+  "blogContainer": [
+    {
+      "title": "testing title",
+      "date": "testing date",
+      "desc": "testing",
+      "link": "blog/testblog.html"
+    },
+
+    {
+      "title": "Placeholder Title One",
+      "date": "Placeholder Date",
+      "desc": "Placeholder Description",
+      "link": "javascript:void(0);"
+    },
+
+    {
+      "title": "Placeholder Title Two",
+      "date": "Placeholder Date",
+      "desc": "Placeholder Description",
+      "link": "javascript:void(0);"
+    }
+  ]
+}

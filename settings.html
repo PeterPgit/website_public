@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-  <title> Favorites | Peter's Website </title>
+  <title> Settings | Peter's Website </title>
   <link rel="icon" href="img/colored.jpeg">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles_dark.css">
@@ -17,8 +17,7 @@
     <a href="index.html" class="logoLink">
       <img src="img/colored.jpeg" alt="Website logo" class="logoMain" id="logo">
     </a>
-    <h1 class="centertextMain title">favorites</h1>
-
+    <h1 class="centertextMain title">welcome!</h1>
     <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
       <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
     </button>
@@ -33,24 +32,28 @@
 </header>
 
 <body onload="init()">
-  <hr>
 
-  <div style="margin-left: 30px; margin-right: 30px;" id="favorites">
-    <h3>applications</h3>
-    <p>here are a list of some of my favorite apps to use, many of which emphasize the user and privacy</p>
-    <ul>
-      <li><a href="https://protonmail.com/" target="_blank" rel="noopener noreferrer">ProtonMail</a></li>
-      <li><a href="https://protonvpn.com/" target="_blank" rel="noopener noreferrer">ProtonVPN</a></li>
-    </ul>
-    <h3>data requests</h3>
-    <p>here lists resources in which you can opt out of tracking, request a copy of your data a company has on you, and
-      request the deletion of your compiled data</p>
+  <div class="float">
     <ul>
       <li>
-        <a href="https://takeout.google.com/settings/takeout" target="_blank" rel="noopener noreferrer">Google</a>
+        <a href="https://miro.medium.com/max/1392/1*2851Jn23-TZT_FQtFaAsGA.jpeg">
+          https://miro.medium.com/max/1392/1*2851Jn23-TZT_FQtFaAsGA.jpeg </a>
       </li>
     </ul>
+  </div>
 
+  <div class="float" style="background-color: #fffaf0;">
+    <ul style="list-style-type:none; display:flex; gap: 10px;">
+      <li style="color:#1A1A1D">#1A1A1D</li>
+      <li style="color:#4E4E50">#4E4E50</li>
+      <li style="color:#6F2232">#6F2232</li>
+      <li style="color:#950740">#950740</li>
+      <li style="color:#25201d">#25201d</li>
+      <li style="color:#dbd8d3">#dbd8d3</li>
+      <li style="color:#20cdbf">#20cdbf</li>
+      <li style="color:#f59bba">#f59bba</li>
+      <li style="color:#473335">#473335</li>
+    </ul>
   </div>
 
   <hr>
@@ -58,12 +61,9 @@
   <footer id=footer-container>
     <script>
       function setActive() {
-        var active = document.getElementById("favoritesbtn");
+        var active = document.getElementById("settingsbtn");
         active.classList.add("active");
         console.log("setActive loaded")
       }
     </script>
   </footer>
-</body>
-
-</html>

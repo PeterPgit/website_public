@@ -1,65 +1,127 @@
+/* All of the code which contorls the dark mode aspect of the whole website */
+
+.dark-mode {
+  background-color: #25201d;
+  color: #dbd8d3;
+  transition-duration: 0.3s;
+}
+
+body.dark-mode hr {
+  color: #e996b1;
+  transition-duration: 0.3s;
+}
+
+.dark-mode a:not(.navbutton):not(.fas):not(.fab) {
+  color: #20cdbf;
+  transition-duration: 0.4s;
+}
+
 .dark-mode .navbutton:hover:not(.active) {
-    color: black;
+  color: black;
 }
 
 .dark-mode .navbutton {
-    color: white;
+  color: white;
 }
 
-.dark-mode {
-    background-color: #152028;
-    color: #C4CAD4;
-    transition-duration: 0.4s;
+
+body.dark-mode #blogContainer a {
+  color: #dbd8d3;
+  background-color: #25201d;
 }
 
-.dark-mode a {
-    color: #f0dcca;
-    transition-duration: 0.4s;
+body.dark-mode #blogContainer a:hover {
+  background: transparent;
+  border-color: transparent;
 }
 
-.blog.dark-mode {
-    background-color: #152028;
-    color: #C4CAD4;
-    transition-duration: 0.4s;
-}
-
-.blog.dark-mode h3 a {
-    color: #f0dcca;
-}
-
-.blog.dark-mode h3 {
-    color: #f0dcca;
-}
-
-.blog.dark-mode h3 a:hover {
-    color: #8D9F87;
-}
-
-.blog.dark-mode h1 a {
-    color: #f0dcca;
-}
-
-.blog.dark-mode h1 a:hover {
-    color: #8D9F87;
-}
-
-.blog.dark-mode p {
-    color: #C4CAD4;
-    transition-duration: 0.4s;
-}
-
-.dark-mode .button:hover {
-    background-color: #f9cb40 !important;
-    color: black;
-    transition-duration: 0.5s;
+body.dark-mode .button:hover {
+  background-color: #f9cb40;
+  color: black;
+  transition-duration: 0.5s;
+  box-shadow: 0 4px 20px #473335;
+  transform: scale(1.05);
 }
 
 .darkFloat {
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 0 black, 10px 10px 0 white;
-    margin: 5px;
-    padding-right: 30px;
-    line-height: 1.6;
-    margin: 25px;
+  border: 2px solid #f59bba;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 #25201d, 10px 10px 0 #5a4043;
+  margin: 5px;
+  padding-right: 30px;
+  line-height: 1.6;
+  margin: 25px;
+  transition-duration: .3s;
+  background-color: #4a4742;
+}
+
+.darkFloat:hover {
+  z-index: 1;
+  box-shadow: 0px 2px 8px 10px #473335;
+  transform: scale(1.01);
+  transition-duration: .3s;
+}
+
+body.dark-mode .logoMain {
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #f59bba;
+  padding: 5px;
+  width: 75px;
+  height: 75px;
+  float: left;
+  transition-duration: 0.4s;
+}
+
+body.dark-mode .logoMain:hover {
+  /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+  box-shadow: 0 4px 20px #473335;
+  transform: scale(1.03);
+  transition-duration: .3s;
+}
+
+body.dark-mode .navbar {
+  background-color: #3b3831;
+}
+
+body.dark-mode .navbar a.active {
+  background-color: #f59bba;
+  color: black;
+}
+
+body.dark-mode .pgpKey {
+  background-color: #3b3831;
+  color: #dbd8d3;
+}
+
+body.dark-mode div.darkFloat ul li a:hover {
+  background-color: #503c3e;
+  color: #e996b1 !important;
+}
+
+body.dark-mode footer .icon-bar li a {
+  background-color: #4a4742;
+  color: #dbd8d3;
+}
+
+body.dark-mode .fa-github-square:hover {
+  background-color: #503c3e;
+  color: #e996b1;
+  opacity: 1;
+}
+
+body.dark-mode .fa-file-code:hover {
+  background-color: #503c3e;
+  color: #e996b1;
+  opacity: 1;
+}
+
+body.dark-mode .fa-envelope:hover {
+  background-color: #503c3e;
+  color: #e996b1;
+  opacity: 1;
+}
+
+body.dark-mode #footer_credit {
+  color: white;
 }
