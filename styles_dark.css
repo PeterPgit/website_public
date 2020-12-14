@@ -1,6 +1,6 @@
 /* All of the code which contorls the dark mode aspect of the whole website */
 
-.dark-mode {
+body.dark-mode {
   background-color: #25201d;
   color: #dbd8d3;
   transition-duration: 0.3s;
@@ -11,19 +11,23 @@ body.dark-mode hr {
   transition-duration: 0.3s;
 }
 
-.dark-mode a:not(.navbutton):not(.fas):not(.fab) {
+body.dark-mode a{
   color: #20cdbf;
   transition-duration: 0.4s;
 }
 
-.dark-mode .navbutton:hover:not(.active) {
+body.dark-mode a:hover:not(.navbutton) {
+  background-color: #503c3e;
+  color: #e996b1;
+}
+
+body.dark-mode .navbutton:hover:not(.active) {
   color: black;
 }
 
-.dark-mode .navbutton {
+body.dark-mode .navbutton {
   color: white;
 }
-
 
 body.dark-mode #blogContainer a {
   color: #dbd8d3;
@@ -35,7 +39,12 @@ body.dark-mode #blogContainer a:hover {
   border-color: transparent;
 }
 
-body.dark-mode .button:hover {
+body.dark-mode #darkbtn {
+  color: #f59bba;
+  background-color: #473335;
+}
+
+body.dark-mode #darkbtn:hover {
   background-color: #f9cb40;
   color: black;
   transition-duration: 0.5s;
@@ -92,11 +101,6 @@ body.dark-mode .navbar a.active {
 body.dark-mode .pgpKey {
   background-color: #3b3831;
   color: #dbd8d3;
-}
-
-body.dark-mode div.darkFloat ul li a:hover {
-  background-color: #503c3e;
-  color: #e996b1 !important;
 }
 
 body.dark-mode footer .icon-bar li a {

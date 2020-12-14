@@ -1,8 +1,7 @@
 {
-  "blogContainer": [
-    {
-      "title": "testing title",
-      "date": "testing date",
+  "blogContainer": [{
+      "title": "Test Page 123",
+      "date": "Aug 30, 2020",
       "desc": "testing",
       "link": "blog/testblog.html"
     },

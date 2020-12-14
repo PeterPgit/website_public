@@ -1,52 +1,23 @@
-// jquery onload
 // $(function() { ... }); is shortcut for on-load
 $(function () {
   $("#nav-container").load("assets/navbar.html", function () {
-    setActive()
-    stickyNav()
+    setActive();
+    stickyNav();
   });
   $("#footer-container").load("assets/footer.html");
   $("#PGP-container").load("assets/PGP.txt");
-  $("#pgpKeybtn").click(function () {})
+  $("#pgpKeybtn").click(function () {});
 });
 
 
 
-$.getJSON('assets/blog.json', function (data) {
+$.getJSON('../assets/blog.json', function (data) {
   /* The parameter (data) will refer to the resume.json whenever called later on in the document */
-  if (window.location.href.indexOf("blog.html") > -1) {
+  if (window.location.href.indexOf("/blog.html") > -1) {
     loadBlog(data.blogContainer, "blogContainer");
   }
 });
-
-function loadBlog(data, type) {
-  var container = document.getElementById(type);
-  for (var i = 0; i < data.length; i++) {
-    var current = data[i];
-    var s = createNode('a', "blocks");
-    s.href = current.link;
-    /*    s.appendChild(createNode('div', "decorator")); */
-    var details = createNode('div', "details");
-    details.appendChildren(
-      createNode('h3', "title", current.title),
-      createNode('p', "date", current.date),
-      createNode('p', "desc", current.desc));
-    s.appendChild(details);
-    container.appendChild(s);
-  }
-};
-
-// $(function() { ... }); is shortcut for on-load
-function floatToggle() {
-  $(".float, .darkFloat").toggleClass("float darkFloat");
-}
-
-/* Loads all into the HTML */
-HTMLElement.prototype.appendChildren = function () {
-  for (var i = 0; i < arguments.length; i++)
-    this.appendChild(arguments[i]);
-};
-
+/* type, className, and inner are all parameter names */
 function createNode(type, className, inner) {
   var result = document.createElement(type);
   result.className = className;
@@ -54,6 +25,67 @@ function createNode(type, className, inner) {
   console.log(result);
   return result;
 };
+
+function loadBlog(data, type) {
+  var container = document.getElementById(type);
+  for (var i = 0; i < data.length; i++) {
+    var current = data[i];
+    var s = createNode('a', "blocks");
+    s.href = current.link;
+    var details = createNode('div', "details");
+    details.appendChildren(
+      createNode('h3', "title", current.title),
+      createNode('p', "date", current.date),
+      createNode('p', "desc", current.desc),
+    );
+    /* appendChild adds to the parent item */
+    s.appendChild(details);
+    container.appendChild(s);
+  }
+};
+
+/* alternative to using the appendChildren function:
+var a = createNode('h3', 'title', current.title);
+var b = createNode('p', "date", current.date);
+var c = createNode('p', "desc", current.desc);
+details.appendChild(a);
+details.appendChild(b);
+details.appendChild(c);
+*/
+
+$.getJSON('../assets/blog.json', function (data) {
+  /* The parameter (data) will refer to the resume.json whenever called later on in the document */
+  if (window.location.href.indexOf("/blog/") > -1) {
+    loadBlogPage(data.blogContainer, "blogContainerPage");
+  }
+});
+
+function loadBlogPage(data, type) {
+  var container = document.getElementById(type);
+  var pageNumber = document.getElementById('pageNumber').innerHTML;
+  var current = data[pageNumber];
+  var details = createNode('div', "blocks");
+  details.appendChildren(
+    createNode('h3', "title", current.title),
+    createNode('p', "date", current.date),
+    document.createElement('br'),
+  );
+  /* appendChild adds to the parent item */
+  container.appendChild(details);
+};
+
+/* declaring the appendChildren function, appends multiple arguments to the parent */
+HTMLElement.prototype.appendChildren = function () {
+  for (var i = 0; i < arguments.length; i++)
+    this.appendChild(arguments[i]);
+};
+
+
+
+// $(function() { ... }); is shortcut for on-load
+function floatToggle() {
+  $(".float, .darkFloat").toggleClass("float darkFloat");
+}
 
 
 
@@ -70,7 +102,6 @@ function load() {
 
 function darktoggle() {
   var bgtoggle = document.getElementById("bgtoggle");
-  var darkbtn = document.getElementById("darkbtn");
   var element = document.body;
   var float = document.querySelectorAll('.float');
 
@@ -78,22 +109,16 @@ function darktoggle() {
   if (localStorage.getItem("dark-mode") == "false") {
     bgtoggle.classList.add("fa-sun");
     bgtoggle.classList.remove("fa-moon");
-    darkbtn.style.backgroundColor = '#473335';
-    darkbtn.style.color = "#f59bba";
     localStorage.setItem("dark-mode", "true");
     element.classList.toggle("dark-mode");
-    darkbtn.classList.toggle("dark-mode");
     if (typeof float !== "undefined") {
       floatToggle();
     }
   } else {
     bgtoggle.classList.add("fa-moon");
     bgtoggle.classList.remove("fa-sun");
-    darkbtn.style.backgroundColor = "black";
-    darkbtn.style.color = "white";
     localStorage.setItem("dark-mode", "false");
     element.classList.toggle("dark-mode");
-    darkbtn.classList.toggle("dark-mode");
     if (typeof float !== "undefined") {
       floatToggle();
     }
@@ -102,16 +127,11 @@ function darktoggle() {
 
 function darkCheck() {
   var element = document.body;
-  var bgtoggle = document.getElementById("bgtoggle");
-  var darkbtn = document.getElementById("darkbtn");
   var float = document.querySelectorAll('.float');
 
   if (localStorage.getItem("dark-mode") == "true") {
     bgtoggle.classList.add("fa-sun");
-    darkbtn.style.backgroundColor = '#473335';
-    darkbtn.style.color = "#f59bba";
     element.classList.toggle("dark-mode");
-    darkbtn.classList.toggle("dark-mode");
     if (typeof float !== "undefined") {
       floatToggle();
     }

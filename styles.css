@@ -41,7 +41,7 @@ body {
   margin: 0px;
 }
 
-body .float a {
+body a {
   color: black;
   transition-duration: 0.4s;
 }
@@ -125,10 +125,6 @@ body div ul li a:hover {
     text-align: left;
   }
 
-  #pgpKey div p {
-    font-size: 9px;
-  }
-
   /* For Mobile */
   ul.icon-bar {
     float: none !important;
@@ -179,7 +175,12 @@ div.align {
   transition-duration: .3s;
 }
 
-.button:hover {
+#darkbtn {
+  color: white;
+  background-color: black;
+}
+
+#darkbtn:hover {
   background-color: #73ADBF;
   transition-duration: 0.5s;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
@@ -194,10 +195,7 @@ header hr {
 }
 
 hr {
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .float {
@@ -309,38 +307,46 @@ footer .icon-bar li a {
   border-color: transparent;
 }
 
-#blogContainer div {}
-
-.title {
+#blogContainer .title {
   margin: 0px 15px 0px 0px;
 }
 
-.date {}
+#blogContainer .date {}
 
-.desc {
+#blogContainer .desc {
   margin-bottom: 0px;
 }
 
-.blocks {
+#blogContainer .blocks {
   display: flex;
 }
+
+#blogContainerPage .blocks {
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+.content {
+  margin: 20px;
+  margin-top: 0px;
+}
+
+.content p {
+  margin-top: 0px;
+}
+
 /* Blog Section */
 
 
 
 /* Favorites Section */
-#favorites p {
+#favorites p,
+#favorites h2 {
   margin-left: 10px;
 }
 
-body:not(.dark-mode) #favorites ul li a {
-  transition-duration: .3s;
-  color: black;
-}
-
-#favorites ul li a:hover {
-  background-color: #8D9F87;
-  color: white !important;
+.fav-section ul {
+  line-height: 22px;
 }
 
 /* Favorites Section */
@@ -369,6 +375,11 @@ body:not(.dark-mode) #favorites ul li a {
 
 /* PGP Key Section */
 
+/* Favorites Section */
+.fav-section {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 
 
 /* Home Page Section*/
@@ -400,4 +411,10 @@ body:not(.loaded) {
 
 .slow {
   transition-duration: .4s
+}
+
+p>a.fas {
+  text-decoration: none;
+  background-color: inherit;
+  color: inherit !important;
 }
