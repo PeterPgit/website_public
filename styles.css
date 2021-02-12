@@ -9,6 +9,7 @@
   height: 75px;
   float: left;
   transition-duration: 0.4s;
+  margin-top: 15px;
 }
 
 a.logoLink {
@@ -281,8 +282,8 @@ footer .icon-bar li a {
 
 
 
-/* Blog Section */
-#blogContainer {
+/* Writing Section */
+#writingContainer {
   background-image: url("img/FirewatchBG.jpg");
   background-size: cover;
   margin: 0;
@@ -291,7 +292,7 @@ footer .icon-bar li a {
   flex-direction: column-reverse;
 }
 
-#blogContainer a {
+#writingContainer a {
   text-decoration: none;
   color: black;
   background-color: #fffaf0;
@@ -301,27 +302,27 @@ footer .icon-bar li a {
   border-width: 1px 0px 1px 0px;
 }
 
-#blogContainer a:hover {
+#writingContainer a:hover {
   background: transparent;
   color: white;
   border-color: transparent;
 }
 
-#blogContainer .title {
+#writingContainer .title {
   margin: 0px 15px 0px 0px;
 }
 
-#blogContainer .date {}
+#writingContainer .date {}
 
-#blogContainer .desc {
+#writingContainer .desc {
   margin-bottom: 0px;
 }
 
-#blogContainer .blocks {
+#writingContainer .blocks {
   display: flex;
 }
 
-#blogContainerPage .blocks {
+#writingContainerPage .blocks {
   margin: 20px;
   margin-bottom: 0px;
 }
@@ -329,13 +330,24 @@ footer .icon-bar li a {
 .content {
   margin: 20px;
   margin-top: 0px;
+  line-height: 22px;
 }
 
 .content p {
   margin-top: 0px;
 }
 
-/* Blog Section */
+a.title {
+  margin-left: 5px;
+}
+
+a.title:hover {
+  background-color: #8D9F87;
+  color: white;
+  margin-left: 10px;
+}
+
+/* Writing Section */
 
 
 
@@ -382,9 +394,14 @@ footer .icon-bar li a {
 }
 
 
-/* Home Page Section*/
+/* Home Page Section */
 #homePage h2 {
   margin-left: 5px;
+}
+
+/* Projects Page Section */
+#projectsPage {
+  line-height: 22px;
 }
 
 /* Loading */

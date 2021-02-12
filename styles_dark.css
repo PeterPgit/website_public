@@ -29,12 +29,12 @@ body.dark-mode .navbutton {
   color: white;
 }
 
-body.dark-mode #blogContainer a {
+body.dark-mode #writingContainer a {
   color: #dbd8d3;
   background-color: #25201d;
 }
 
-body.dark-mode #blogContainer a:hover {
+body.dark-mode #writingContainer a:hover {
   background: transparent;
   border-color: transparent;
 }

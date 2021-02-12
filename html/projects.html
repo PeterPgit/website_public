@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Projects | Peter's Website </title>
+  <link rel="icon" href="../img/icon.jpeg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles_dark.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../scripts.js"></script>
+</head>
+
+<header>
+  <div class="align">
+    <a href="../index.html" class="logoLink">
+      <img src="../img/icon.jpeg" alt="Website logo" class="logoMain" id="logo">
+    </a>
+    <h1 class="centertextMain title">projects</h1>
+    <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
+      <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
+    </button>
+  </div>
+
+  <hr>
+
+  <div style="height: 40px;">
+    <div id="nav-container"> </div>
+  </div>
+
+</header>
+
+<body onload="init()" id="homePage">
+  <hr>
+
+  <div id="projectsPage">
+
+    <h2>projects</h2>
+    <div>
+      <ul>
+        <li><a href="https://github.com/PeterPgit/MC-StatTrak" target="_blank" rel="noopener noreferrer">MC StatTrak</a>
+        </li>
+        <p>MC StatTrak is my first project outside of this website. it mimics Counter Strike: Global Offensive's
+          StatTrak system, which tracks the amount of kills you get on a weapon. I recreated this design (with the help
+          / inspiration of another creator) and implemented tracking for an assortment of tools and weapons, along with
+          toggleable player-specific customization, tracking everything from specific blocks mined to weapon kills. if
+          you've ever played Minecraft, I encourage you to check out my datapack! </p>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><a href="https://github.com/PeterPgit/mnml" target="_blank" rel="noopener noreferrer">mnml</a>
+        </li>
+        <p> mnml (pronouned "minimal") is a Firefox extension which aims to create a minimal browsing experience. the
+          internet is a tool and decisions should be driven and influenced by the user alone. it
+          works to lessen the distractions and psycological tricks websites use to influence your decisions, such as the
+          use of attention grabbing buttons and colors. currently just a work in progress, I hope to one day reach
+          completion with support for many popular websites. </p>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <footer id=footer-container>
+    <script>
+      function setActive() {
+        var active = document.getElementById("projectsbtn");
+        active.classList.add("active");
+        console.log("setActive loaded")
+      }
+    </script>
+  </footer>
+
+</body>
+
+</html>

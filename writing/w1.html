@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Welcome | Peter's Website </title>
+  <link rel="icon" href="../img/icon.jpeg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles_dark.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../scripts.js"></script>
+</head>
+
+<header>
+  <div class="align" style="margin-top: 20px;">
+
+    <h1 class="centertextMain title"><a href="../html/writing.html" class="title">p's writing</a></h1>
+    <button onclick="darktoggle()" class="button right" id="darkbtn" style="margin-right:25px">
+      <i class="fa fa-moon fa-2x" id="bgtoggle"></i>
+    </button>
+  </div>
+
+  <div style="visibility: hidden; height:0px;" id="pageNumber">0</div>
+
+</header>
+
+<body onload="init()" class="writing">
+
+  <hr>
+
+  <div>
+    <div id="writingContainerPage"></div>
+    <div class="content">
+      <p>hello! if you're reading this, it means you've found my website one way or another. thanks for checking things
+        out! to be honest, I don't quite have an exact reason for making this website in the first place; it just seemed
+        like it would be fun and gets me to learn something new. as noted in the home page, this all started out as a
+        quarantine project. it all started from a blank page and slowly but surely, with many, many tutorials + youtube
+        videos later, developed into what you're seeing today. </p>
+
+      <p>I'll sporadically update this from time to time with whatever pops into my head. this'll act as a page for me
+        to express all of my ideas and stuff that I constantly think about.</p>
+
+      <p>as for starters, you've probably noticed the grammar in which I type everything out. that's not because I'm
+        lazy or anything, but instead because I feel like it adds voice to my writing. because of the nature of
+        communicating online, it can be hard to communicate and interpret emotion within a piece of text. the lack of
+        capitalization serves to both denote informal writing and sets the tone of the words. </p>
+      <br>
+      <p>for example, a sentence like:</p>
+      <blockquote>Hello, how are you doing today?</blockquote>
+      <p>feels formal, less unique, and is the standard writing.</p>
+      <p>however,</p>
+      <blockquote>hello, how are you doing today?</blockquote>
+      <p>provokes a different emotion. the lack of fomality instead feels like a friend talking to a friend. it's more
+        soft spoken and feels more genuine.</p>
+      <br>
+      <p>some other examples include:</p>
+      <blockquote>HELLO, HOW ARE YOU DOING TODAY?</blockquote>
+      <p>to denote anger, or its real life equivalent of screaming</p>
+      <p>and</p>
+      <blockquote>hElLo, HoW aRe YoU dOiNg ToDaY?</blockquote>
+      <p>to denote sarcasm.</p>
+      <br>
+      <p>the goal of this website is to act as a place for me to talk about different projects, goals, and interests. I
+        want it to lack formality and to instead act as a way for people to see some insight on my life. it's a place
+        for me to express different feelings and explain my thoughts on different topics. it's as if I'm talking to a friend, yet
+        that friend is a random person behind a screen. </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <div>
+      <p style="float: none; margin-left: auto; margin-right: auto; text-align: center;">
+        made with ♥ by Peter @ PeterPgit
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

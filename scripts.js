@@ -1,20 +1,20 @@
 // $(function() { ... }); is shortcut for on-load
 $(function () {
-  $("#nav-container").load("assets/navbar.html", function () {
+  $("#nav-container").load("../assets/navbar.html", function () {
     setActive();
     stickyNav();
   });
-  $("#footer-container").load("assets/footer.html");
-  $("#PGP-container").load("assets/PGP.txt");
+  $("#footer-container").load("../assets/footer.html");
+  $("#PGP-container").load("../assets/PGP.txt");
   $("#pgpKeybtn").click(function () {});
 });
 
 
 
-$.getJSON('../assets/blog.json', function (data) {
+$.getJSON('../assets/writing.json', function (data) {
   /* The parameter (data) will refer to the resume.json whenever called later on in the document */
-  if (window.location.href.indexOf("/blog.html") > -1) {
-    loadBlog(data.blogContainer, "blogContainer");
+  if (window.location.href.indexOf("/writing.html") > -1) {
+    loadWriting(data.writingContainer, "writingContainer");
   }
 });
 /* type, className, and inner are all parameter names */
@@ -26,7 +26,7 @@ function createNode(type, className, inner) {
   return result;
 };
 
-function loadBlog(data, type) {
+function loadWriting(data, type) {
   var container = document.getElementById(type);
   for (var i = 0; i < data.length; i++) {
     var current = data[i];
@@ -53,14 +53,14 @@ details.appendChild(b);
 details.appendChild(c);
 */
 
-$.getJSON('../assets/blog.json', function (data) {
+$.getJSON('../assets/writing.json', function (data) {
   /* The parameter (data) will refer to the resume.json whenever called later on in the document */
-  if (window.location.href.indexOf("/blog/") > -1) {
-    loadBlogPage(data.blogContainer, "blogContainerPage");
+  if (window.location.href.indexOf("/writing/") > -1) {
+    loadWritingPage(data.writingContainer, "writingContainerPage");
   }
 });
 
-function loadBlogPage(data, type) {
+function loadWritingPage(data, type) {
   var container = document.getElementById(type);
   var pageNumber = document.getElementById('pageNumber').innerHTML;
   var current = data[pageNumber];
