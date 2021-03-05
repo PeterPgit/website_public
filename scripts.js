@@ -10,13 +10,29 @@ $(function () {
 });
 
 
-
-$.getJSON('../assets/writing.json', function (data) {
-  /* The parameter (data) will refer to the resume.json whenever called later on in the document */
-  if (window.location.href.indexOf("/writing.html") > -1) {
-    loadWriting(data.writingContainer, "writingContainer");
+function passVerify() {
+  var password = "Penguin";
+  if ($("#password").val() == password) {
+    if ($('#writingContainer').text().length < 10) {
+      doSomething()
+    }
   }
-});
+  else {
+    $("#err").text("Incorrect");
+  }
+};
+
+
+function doSomething() {
+  $.getJSON('../assets/writing.json', function (data) {
+    /* The parameter (data) will refer to the resume.json whenever called later on in the document */
+    if (window.location.href.indexOf("/writing.html") > -1) {
+      loadWriting(data.writingContainer, "writingContainer");
+    }
+  })
+};
+
+
 /* type, className, and inner are all parameter names */
 function createNode(type, className, inner) {
   var result = document.createElement(type);
