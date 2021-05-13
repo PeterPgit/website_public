@@ -116,7 +116,7 @@ function load() {
 
 
 
-function darktoggle() {
+function darkToggle() {
   var bgtoggle = document.getElementById("bgtoggle");
   var element = document.body;
   var float = document.querySelectorAll('.float');
