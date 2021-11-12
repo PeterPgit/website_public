@@ -9,20 +9,6 @@ $(function () {
   $("#pgpKeybtn").click(function () {});
 });
 
-
-function passVerify() {
-  var password = "Penguin";
-  if ($("#password").val() == password) {
-    if ($('#writingContainer').text().length < 10) {
-      doSomething()
-    }
-  }
-  else {
-    $("#err").text("Incorrect");
-  }
-};
-
-
 function doSomething() {
   $.getJSON('../assets/writing.json', function (data) {
     /* The parameter (data) will refer to the resume.json whenever called later on in the document */
@@ -76,19 +62,6 @@ $.getJSON('../assets/writing.json', function (data) {
   }
 });
 
-function loadWritingPage(data, type) {
-  var container = document.getElementById(type);
-  var pageNumber = document.getElementById('pageNumber').innerHTML;
-  var current = data[pageNumber];
-  var details = createNode('div', "blocks");
-  details.appendChildren(
-    createNode('h3', "title", current.title),
-    createNode('p', "date", current.date),
-    document.createElement('br'),
-  );
-  /* appendChild adds to the parent item */
-  container.appendChild(details);
-};
 
 /* declaring the appendChildren function, appends multiple arguments to the parent */
 HTMLElement.prototype.appendChildren = function () {
@@ -181,15 +154,3 @@ function stickyNav() {
 }
 
 
-
-function pgpKey() {
-  var x = document.getElementById("pgpKey");
-  var pgpKeybtn = document.getElementById("pgpKeybtn")
-  if (x.style.display === "none") {
-    x.style.display = "table";
-    pgpKeybtn.innerHTML = "<b>Hide PGP Key</b>"
-  } else {
-    x.style.display = "none";
-    pgpKeybtn.innerHTML = "<b>View PGP Key</b>"
-  }
-}
