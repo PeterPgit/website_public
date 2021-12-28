@@ -223,7 +223,10 @@ hr {
   flex-wrap: wrap;
 }
 
-.container>p {}
+.container>p {
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
 
 
 /* Footer Section */
